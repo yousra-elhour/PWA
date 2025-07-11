@@ -1,7 +1,7 @@
 const CACHE_NAME = "weather-app-v6";
 const urlsToCache = [
-  `${self.location.origin}${self.location.pathname}index.html`,
-  `${self.location.origin}${self.location.pathname}offline.html`,
+  `index.html`,
+  `offline.html`,
 ];
 
 // install sw
