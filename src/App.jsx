@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { fetchWeather } from "./api/fetchWeather";
-import InstallPrompt from "./IntallPrompt";
 
 const App = () => {
   const [weatherData, setWeatherData] = useState(null);
@@ -65,7 +64,6 @@ const App = () => {
 
   return (
     <div>
-      <InstallPrompt />
       <div className="app">
         <h1>Weather App</h1>
         <div className="search">

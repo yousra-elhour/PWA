@@ -4,8 +4,6 @@ const urlsToCache = [
   `${self.location.origin}${self.location.pathname}offline.html`,
 ];
 
-const self = this;
-
 // install sw
 
 self.addEventListener("install", (event) => {
