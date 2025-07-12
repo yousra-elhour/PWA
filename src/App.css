@@ -1,0 +1,378 @@
+/* Weather App Styles */
+.app {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%);
+  min-height: 100vh;
+  color: #333;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+  margin-bottom: 30px;
+  font-size: 2.5em;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Connection Status */
+.connection-status {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.connection-status.online {
+  background-color: #00b894;
+  color: white;
+}
+
+.connection-status.offline {
+  background-color: #e17055;
+  color: white;
+}
+
+.pending-requests {
+  font-size: 0.9em;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 5px 10px;
+  border-radius: 15px;
+}
+
+/* Location Section */
+.location-section {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.location-btn {
+  background: #00b894;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background 0.3s;
+  width: 100%;
+}
+
+.location-btn:hover {
+  background: #00a085;
+}
+
+.location-error {
+  color: #e17055;
+  margin-top: 10px;
+  font-size: 0.9em;
+}
+
+.location-info {
+  color: #636e72;
+  margin-top: 10px;
+  font-size: 0.9em;
+}
+
+/* Notifications Component */
+.notifications-component {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.notifications-component h3 {
+  margin-top: 0;
+  color: #2d3436;
+}
+
+.notification-btn {
+  background: #a29bfe;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9em;
+  transition: background 0.3s;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.notification-btn:hover {
+  background: #6c5ce7;
+}
+
+.notification-settings p {
+  margin: 10px 0;
+  color: #2d3436;
+}
+
+/* Search Section */
+.search {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.search input {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1em;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.search button {
+  background: #fd79a8;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background 0.3s;
+}
+
+.search button:hover:not(:disabled) {
+  background: #e84393;
+}
+
+.search button:disabled {
+  background: #b2bec3;
+  cursor: not-allowed;
+}
+
+/* Temperature Unit Toggle */
+.unit-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  gap: 10px;
+  color: white;
+  font-weight: bold;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #fd79a8;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/* Loading and Error States */
+.loading {
+  text-align: center;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  color: #74b9ff;
+  font-size: 1.1em;
+}
+
+.error {
+  text-align: center;
+  padding: 20px;
+  background: #fab1a0;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  color: #e17055;
+  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Weather Information */
+.weather-info {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.weather-info h2 {
+  color: #2d3436;
+  margin-bottom: 20px;
+  font-size: 1.5em;
+}
+
+.weather-info p {
+  margin: 10px 0;
+  color: #636e72;
+  font-size: 1.1em;
+}
+
+.weather-info img {
+  width: 80px;
+  height: 80px;
+  margin: 10px 0;
+}
+
+/* Recent Searches */
+.recent-searches {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.recent-searches h3 {
+  color: #2d3436;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.recent-searches ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.recent-searches li {
+  padding: 10px 15px;
+  margin-bottom: 8px;
+  background: #f8f9fa;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+  color: #2d3436;
+}
+
+.recent-searches li:hover {
+  background: #e9ecef;
+}
+
+.recent-searches li:last-child {
+  margin-bottom: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .app {
+    padding: 10px;
+  }
+
+  .search {
+    flex-direction: column;
+  }
+
+  .search input,
+  .search button {
+    width: 100%;
+  }
+
+  .location-btn {
+    font-size: 0.9em;
+    padding: 10px;
+  }
+
+  .weather-info {
+    padding: 15px;
+  }
+
+  .weather-info h2 {
+    font-size: 1.2em;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.weather-info,
+.recent-searches,
+.notifications-component,
+.location-section {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Notification Permission States */
+.notification-settings {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.notification-settings p {
+  margin: 5px 0;
+}
+
+/* Utility Classes */
+.text-center {
+  text-align: center;
+}
+
+.mt-10 {
+  margin-top: 10px;
+}
+
+.mb-10 {
+  margin-bottom: 10px;
+}
